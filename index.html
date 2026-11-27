@@ -3,6 +3,18 @@ layout: default
 ---
 {% if paginator.page == 1 %}
 {% include post_carousel.html %}
+<div id="next-event" class="container mt-3 mb-4" hidden>
+	<div class="col-12 col-lg-9 mx-auto alert alert-success mb-0 next-event">
+		<strong data-label>Next community event:</strong>
+		<a data-name href="https://calendar.opensuse.org/"></a>
+		<span class="text-muted" data-when></span>
+		<span class="next-event-actions">
+			<a data-join class="btn btn-sm btn-primary" target="_blank" rel="noopener" hidden>Join meeting</a>
+			<a class="btn btn-sm btn-success" href="https://calendar.opensuse.org/">All events</a>
+		</span>
+	</div>
+</div>
+<script src="{{ '/assets/js/next-event.js' | relative_url }}" defer></script>
 {% endif %}
 <div class="d-flex">
 	<img src="/assets/images/news-icon.png" alt="News Icon" class="mx-auto">
